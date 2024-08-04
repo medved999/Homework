@@ -1,0 +1,10 @@
+def get_multiplied_digits(number):
+    str_number = str(number)
+    print(len(str_number))
+    #print(str_number)
+    #print(type(str_number))
+    #first = int(str_number[0])
+    #first * get_multiplied_digits(int(str_number[1:]))
+    #print(first)
+    #print(type(first))
+get_multiplied_digits(9918299823)
