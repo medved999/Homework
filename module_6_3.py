@@ -9,12 +9,9 @@ class Eagle:
     def __init__(self):
         self.y_distance = 0
         self.sound = "I train, eat, sleep, and repeat"
-        super().__init__()
     def fly(self, dy):
         self.y_distance += dy
 class Pegasus(Horse, Eagle):
-    def __init__(self):
-        super().__init__()
     def move(self, dx, dy):
         Horse.run(self, dx)
         Eagle.fly(self, dy)
