@@ -1,3 +1,7 @@
+name = "products.txt"                                              #создаем txt если он осутствует
+file = open(name, "a")
+file.close()
+
 class Product:
     def __init__(self, name, weight, category):
         self.name = str(name)
@@ -10,13 +14,15 @@ class Shop:
     def __init__(self):
         self.__file_name = "products.txt"
 
-    def get_products(self):                                           #Выводим инфу с файла
+    def get_products(self):                                        #Выводим инфу с файла
         self.file = open(self.__file_name, "r", encoding='utf-8')
         print(self.file.read())
         return self.file.read()
         self.file.close()
 
-    def add(self, *products):                                    #Добавляем пачку в файл и проверяем
+    def add(self, *products):                                    #Добавляем пачку и проверяем
+        #self.file = open(self.__file_name, "a")
+        #self.file.close()
         self.products = products
         for i in products:
             self.file = open(self.__file_name, "r", encoding='utf-8')
